@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StartCheck - Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Custom scrollbar for testimonial slider */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+    <div class="flex items-center space-x-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Logo" class="w-8 h-8" />
+      <span class="font-semibold text-lg">StartCheck</span>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <a href="#" class="hover:text-teal-500 transition">Inicio</a>
+      <a href="#" class="hover:text-teal-500 transition">Planes</a>
+      <a href="#" class="hover:text-teal-500 transition">Sobre Nosotros</a>
+      <a href="#" class="hover:text-teal-500 transition">Contacto</a>
+    </nav>
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="px-4 py-2 bg-teal-400 text-white rounded-full font-semibold hover:bg-teal-500 transition">Sign up</a>
+      <a href="#" class="px-4 py-2 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition">Sign in</a>
+    </div>
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-4 bg-white border-b border-gray-200">
+    <a href="#" class="block text-gray-700 font-medium">Inicio</a>
+    <a href="#" class="block text-gray-700 font-medium">Planes</a>
+    <a href="#" class="block text-gray-700 font-medium">Sobre Nosotros</a>
+    <a href="#" class="block text-gray-700 font-medium">Contacto</a>
+    <div class="flex space-x-4 mt-2">
+      <a href="#" class="flex-1 text-center px-4 py-2 bg-teal-400 text-white rounded-full font-semibold hover:bg-teal-500 transition">Sign up</a>
+      <a href="#" class="flex-1 text-center px-4 py-2 bg-blue-900 text-white rounded-full font-semibold hover:bg-blue-800 transition">Sign in</a>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-teal-500 to-blue-900 text-white text-center py-20 px-6">
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-4">¿Tu idea de negocio tiene futuro?</h1>
+    <p class="text-lg md:text-xl mb-8 font-semibold">Descúbrelo en minutos con StartCheck</p>
+    <a href="#" class="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-3 hover:bg-gray-100 transition">Try For Free</a>
+  </section>
+
+  <!-- Features Section -->
+  <section class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+    <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+      <div class="mb-4 flex justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Idea" class="w-12 h-12" />
+      </div>
+      <h3 class="font-semibold mb-2">1. Escribe tu idea</h3>
+      <p class="text-sm text-gray-400">Describe tu proyecto en detalle en nuestro campo de texto</p>
+    </div>
+    <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+      <div class="mb-4 flex justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913467.png" alt="AI" class="w-12 h-12" />
+      </div>
+      <h3 class="font-semibold mb-2">2. Recibe tu analisis con IA</h3>
+      <p class="text-sm text-gray-400">Nuestro motor de IA evalúa tu idea rápidamente</p>
+    </div>
+    <div class="border border-gray-200 rounded-lg p-6 shadow-sm">
+      <div class="mb-4 flex justify-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913473.png" alt="Focus" class="w-12 h-12" />
+      </div>
+      <h3 class="font-semibold mb-2">3. Mejora tu enfoque</h3>
+      <p class="text-sm text-gray-400">Obtén feedback y sugerencias para pulir tu plan</p>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-blue-900 mb-8 text-center">Beneficios Clave</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-600 text-sm">
+      <div class="border border-gray-200 rounded-lg p-4 flex items-start space-x-3">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913477.png" alt="Fast" class="w-6 h-6 mt-1" />
+        <div>
+          <p class="font-semibold text-gray-700">Resultados Rápidos</p>
+          <p>Obtén un análisis preliminar en minutos, no semanas.</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-4 flex items-start space-x-3">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913479.png" alt="Comparison" class="w-6 h-6 mt-1" />
+        <div>
+          <p class="font-semibold text-gray-700">Comparación con Startups</p>
+          <p>Ve cómo se compara tu idea con negocios exitosos en el mercado.</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-4 flex items-start space-x-3">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913481.png" alt="Market" class="w-6 h-6 mt-1" />
+        <div>
+          <p class="font-semibold text-gray-700">Recomendaciones de Mercado</p>
+          <p>Identifica oportunidades y tendencias relevantes para tu nicho.</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-4 flex items-start space-x-3 mt-6">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913483.png" alt="Suggestions" class="w-6 h-6 mt-1" />
+        <div>
+          <p class="font-semibold text-gray-700">Sugerencias de Mejora</p>
+          <p>Recibe consejos concretos para fortalecer tu propuesta de valor.</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-4 flex items-start space-x-3 mt-6">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913485.png" alt="Validation" class="w-6 h-6 mt-1" />
+        <div>
+          <p class="font-semibold text-gray-700">Validación Basada en Datos</p>
+          <p>Nuestros análisis se basan en vastas fuentes de información.</p>
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg p-4 flex items-start space-x-3 mt-6">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913487.png" alt="Save" class="w-6 h-6 mt-1" />
+        <div>
+          <p class="font-semibold text-gray-700">Ahorra Tiempo y Dinero</p>
+          <p>Valida antes de invertir grandes recursos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans Section -->
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-blue-900 mb-8 text-center">Nuestros Planes</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Plan 1 -->
+      <div class="bg-gradient-to-b from-blue-900 to-teal-400 rounded-2xl p-6 text-white shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913491.png" alt="Idea Verification" class="w-16 h-16 mb-4" />
+        <h3 class="font-semibold text-lg mb-1">Verificación inicial de idea</h3>
+        <p class="text-xl font-bold mb-2">Gratis</p>
+        <p class="text-xs mb-4">Realiza una rápida verificación para saber si tu idea tiene potencial en el mercado.</p>
+        <ul class="text-xs space-y-1">
+          <li>✔ Verificación básica</li>
+          <li>✔ Atención limitada</li>
+          <li>✔ Acceso online</li>
+        </ul>
+      </div>
+      <!-- Plan 2 -->
+      <div class="bg-gradient-to-b from-blue-900 to-teal-400 rounded-2xl p-6 text-white shadow-lg relative">
+        <span class="absolute top-2 left-2 bg-white text-teal-600 text-xs font-semibold px-2 py-1 rounded-full uppercase">Popular</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913493.png" alt="Detailed Analysis" class="w-16 h-16 mb-4" />
+        <h3 class="font-semibold text-lg mb-1">Análisis detallado del mercado</h3>
+        <p class="text-xl font-bold mb-2">S/10 <span class="text-sm font-normal">por mes</span></p>
+        <p class="text-xs mb-4">Incluye verificación inicial y proporciona un análisis profundo del mercado para tu idea.</p>
+        <ul class="text-xs space-y-1">
+          <li>✔ Análisis detallado</li>
+          <li>✔ Estudio de mercado</li>
+          <li>✔ Informe competitivo</li>
+        </ul>
+      </div>
+      <!-- Plan 3 -->
+      <div class="bg-gradient-to-b from-blue-900 to-teal-400 rounded-2xl p-6 text-white shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913495.png" alt="Technical Evaluation" class="w-16 h-16 mb-4" />
+        <h3 class="font-semibold text-lg mb-1">Evaluación Tecnica Complet</h3>
+        <p class="text-xl font-bold mb-2">S/40 <span class="text-sm font-normal">por mes</span></p>
+        <p class="text-xs mb-4">Incluye todas las características previas y añade una evaluación técnica exhaustiva para prever retos técnicos.</p>
+        <ul class="text-xs space-y-1">
+          <li>✔ Evaluación técnica</li>
+          <li>✔ Previsión de retos</li>
+          <li>✔ Recomendaciones IA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Slider Section -->
+  <section class="relative max-w-7xl mx-auto px-6 py-20">
+    <div class="relative rounded-xl overflow-hidden shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
+      <div class="bg-black bg-opacity-60 p-10 text-white max-w-3xl mx-auto rounded-xl">
+        <p class="text-lg leading-relaxed mb-6">
+          Gracias a StartCheck, transformé mi idea en un proyecto exitoso. Su análisis detallado y enfoque de validación son invaluables. Recomiendo sus servicios a cualquiera que busque certezas antes de lanzarse al mercado.
+        </p>
+        <p class="font-semibold text-right">- Carla Mendoza</p>
+      </div>
+      <!-- Arrows -->
+      <button aria-label="Previous testimonial" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-40 rounded-full p-2 hover:bg-opacity-60 transition">
+        <
+      </button>
+      <button aria-label="Next testimonial" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-40 rounded-full p-2 hover:bg-opacity-60 transition">
+        >
+      </button>
+    </div>
+  </section>
+
+  <!-- Illustration Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20 flex justify-center">
+    <img src="https://cdn.dribbble.com/users/107834/screenshots/14057669/media/0a3a3a3a7a3a3a3a3a3a3a3a3a3a3a3a.png" alt="Creative Illustration" class="max-w-md" />
+  </section>
+
+</body>
+</html>
